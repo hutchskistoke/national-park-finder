@@ -133,7 +133,7 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 
 ## Wireframes
 
-![Wirefram](https://git.generalassemb.ly/hutchski/national-park-finder/blob/master/Screen%20Shot%202021-01-25%20at%204.26.28%20PM.png)
+[Wireframe](https://i.imgur.com/BljceaK.jpg)
 
 ### MVP/PostMVP
 
@@ -164,7 +164,7 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 
 ## Priority Matrix
 
-![Time Matrix](https://git.generalassemb.ly/hutchski/national-park-finder/blob/master/P1%20Time%20Matrix.jpeg)
+[Priority Matrix](https://i.imgur.com/Hj9mZ0X.jpg)
 
 ## Timeframes
 
