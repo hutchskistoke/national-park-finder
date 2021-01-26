@@ -9,13 +9,24 @@ async function parkResult() {
 
   try {
     let response = await axios.get(url)
-    console.log(`inside try: `, response)
+
+    let parksArray = response.data.data
+    console.log(`parks array: `, parksArray)
+    for (let i = 0; i < parksArray.length; i++) {
+      let parkName = response.data.data[i].fullName
+      if (parkName.includes(`${userSearch}`)) {
+        console.log(`actual park`, parkName)
+      }
+    }
+
   } catch (error) {
     console.log(error)
   }
 
 }
 // parkResult()
+
+
 
 inputButton.addEventListener('click', (e) => {
   e.preventDefault()
