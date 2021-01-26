@@ -155,8 +155,8 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Jan 26| Project Approval | Incomplete
+|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Jan 26| Project Approval | Complete
 |Jan 27| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Jan 28| Initial Clickable Model  | Incomplete
 |Jan 29| MVP | Incomplete
@@ -170,7 +170,7 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Initial HTML setup | H | 3hrs|  |  |
+| Initial HTML setup | H | 3hrs|   |  |
 | Axios set up | H | 6hrs|  |  |
 | Render results | H | 6hrs|  |  |
 | Other JS | H | 6hrs|  |  |
