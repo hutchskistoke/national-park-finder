@@ -170,8 +170,8 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Initial HTML setup | H | 3hrs|   |  |
-| Axios set up | H | 6hrs|  |  |
+| Initial HTML setup | H | 3hrs| 1hr |  |
+| Axios set up | H | 6hrs| 4hrs |  |
 | Render results | H | 6hrs|  |  |
 | Other JS | H | 6hrs|  |  |
 | CSS for basic layout | M | 3hrs|  |  |
