@@ -5,7 +5,8 @@ let inputButton = document.querySelector('#search')
 async function parkResult() {
   let userSearch = userInput.value.toLowerCase()
   const url = `https://developer.nps.gov/api/v1/parks?q=${userSearch}&api_key=fxheInC78kFAXET9y492TAWBb706vN5yWmjyIfTb`
-
+  removePhoto()
+  removeWords()
   try {
     let response = await axios.get(url)
 
@@ -13,9 +14,13 @@ async function parkResult() {
     // console.log(parksArray)
     for (let i = 0; i < parksArray.length; i++) {
       let parkChosen = response.data.data[i].fullName.toLowerCase()
+      // let wantedResults = response.data.data[i]
       if (parkChosen.includes(userSearch)) {
         // console.log(`actual park:`, parkChosen)
-        renderResults(parkChosen)
+        // let wantedResults = response.data.data[i]
+
+        renderPhoto(parksArray[i])
+        renderWords(parksArray[i])
       }
     }
   } catch (error) {
@@ -26,17 +31,23 @@ async function parkResult() {
 parkResult()
 
 // display the results
-function renderResults(parkChosen) {
-  let resultsContainer = document.querySelector('.results')
-
-  let displayPark = `
-  <h2 class='park-name'>${parkChosen}</h2>
-  <img src='${parkChosen.images[0]}' alt='park photo'>
+function renderWords(parkChosen) {
+  let wordsContainer = document.querySelector('.words-results')
+  console.log(parkChosen)
+  let displayWords = `
+  <h2 class='park-name'>${parkChosen.fullName}</h2>
+  <p class='park-descripton'>${parkChosen.description}</p>
   `
+  wordsContainer.insertAdjacentHTML('afterbegin', displayWords)
+}
 
-
-  resultsContainer.insertAdjacentHTML('afterbegin', displayPark)
-
+function renderPhoto(parkChosen) {
+  let photoContainer = document.querySelector('.photo-result')
+  console.log(parkChosen)
+  let displayPhoto = `
+  <img class='park-photo' src='${parkChosen.images[0].url}' alt='park photo'>
+  `
+  photoContainer.insertAdjacentHTML('afterbegin', displayPhoto)
 }
 
 
@@ -45,5 +56,20 @@ inputButton.addEventListener('click', (e) => {
   let park = document.querySelector('#search-field').value
   parkResult(park)
 })
+
+function removePhoto() {
+  const removeCurrent = document.querySelector('.photo-result')
+  while (removeCurrent.lastChild) {
+    removeCurrent.removeChild(removeCurrent.lastChild)
+  }
+}
+
+function removeWords() {
+  const removeCurrent = document.querySelector('.words-results')
+  while (removeCurrent.lastChild) {
+    removeCurrent.removeChild(removeCurrent.lastChild)
+  }
+}
+
 
 

@@ -4,24 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' src='./style.css'>
+  <link rel='stylesheet' href='./style.css'>
   <script defer src="./app.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
   <title>National Park Finder</title>
 </head>
-<h1>The mountains are calling...</h1>
 
-<div>
-  <input type='text' id='search-field' placeholder='Enter Park Name Here'>
-  <button id='search'>Explore!</button>
-</div>
+<body class='container'>
+  <header>
+    <h1>The mountains are calling...</h1>
+  </header>
+  <main>
+    <div>
+      <input type='text' id='search-field' placeholder='Enter Park Name Here'>
+      <button id='search'>Explore!</button>
+    </div>
 
-<div class='results'>
-
-</div>
-
-<body>
-
+    <div class='words-results'>
+    </div>
+    <div class='photo-result'>
+    </div>
+  </main>
 </body>
 
 </html>
