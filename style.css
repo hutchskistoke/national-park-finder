@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+body {
+  font-family: 'Amatic SC', cursive;
+}
+
 
 
 
@@ -19,12 +23,24 @@ input {
   border-radius: 10%;
 }
 
+input {
+  width: 140px;
+}
+
 header {
   /* Kamal Chilaka Photography */
   background-image: url(https://images.squarespace-cdn.com/content/v1/557423a2e4b0551508c8d981/1552456479669-YN44CJ4EB8YPZO0B9SUO/ke17ZwdGBToddI8pDm48kPqQfq0L3n3wpHIsRapTfg8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczo5Zn4xktlpMsMj-QlHXeMfNK6GwvtVkYEWiR8XAPyD3GfLCe_DXOSC_YcAacWL_/Yellowstone+and+Grand+Tetons-4.jpg?format=1000w);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
+}
+
+.search-bar {
+  /* display: flex; */
+  /* border: 2px solid purple; */
+  align-items: flex-end;
+  text-align: center;
+  margin-top: 170px;
 }
 
 img {
@@ -45,13 +61,21 @@ main {
 
 .photo-result {
   display: flex;
-  
+  align-self: center;
 }
  
 .park-name,
 .park-description,
 .park-photo {
   border: 1px solid black;
+}
+
+.park-descripton {
+  font-size: 2em;
+}
+
+.park-name {
+  font-size: 3em;
 }
 
 

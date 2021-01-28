@@ -15,13 +15,13 @@
 <body class='container'>
   <header>
     <h1>The mountains are calling...</h1>
-  </header>
-  <main>
-    <div>
-      <input type='text' id='search-field' placeholder='Enter Park Name Here'>
+    <div class='search-bar'>
+      <input type='text' id='search-field' onfocus="this.value=''" placeholder='Enter Park Name Here'>
       <button id='search'>Explore!</button>
     </div>
+  </header>
 
+  <main>
     <div class='words-results'>
     </div>
     <div class='photo-result'>

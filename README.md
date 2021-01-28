@@ -172,11 +172,11 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 | --- | :---: |  :---: | :---: | :---: |
 | Initial HTML setup | H | 3hrs| 1hr |  |
 | Axios set up | H | 6hrs| 4hrs |  |
-| Render results | H | 6hrs|  |  |
+| Render results | H | 6hrs| 6hrs |  |
 | Other JS | H | 6hrs|  |  |
 | CSS for basic layout | M | 3hrs|  |  |
-| CSS for results | M | 5hrs|  |  |
-| Image placement | M | 3hrs|  |  |
+| CSS for results | M | 5hrs| 3hrs |  |
+| Image placement | M | 3hrs| 1hrs |  |
 | Media query | H | 3hrs|  |  |
 | General Research | H | 6hrs|  |  |
 | Debugging | H | 4hrs|  |  |
