@@ -37,7 +37,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
-  border-radius: 7px;
+  border-radius: 10px;
+  width: 100%;
 }
 
 img {
@@ -48,6 +49,7 @@ img {
 a {
   font-size: 2em;
 }
+
 
 .uhoh {
   font-size: 3em;
@@ -109,17 +111,18 @@ a {
   display: flex;
   align-self: center;
   flex-direction: column wrap;
+  width: 100%;
 }
 
 .park-photo {
-  border-radius: 15px;
+  border-radius: 10px;
 }
  
 
 /* media querry */
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
   .individual-parks {
     flex-direction: column;
   }
@@ -134,8 +137,19 @@ a {
   .container {
     background-color: rgb(112, 128, 144);
   }
+  .individual-parks {
+    flex-wrap: wrap;
+  }
   .words {
     flex-grow: 2;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 }
 

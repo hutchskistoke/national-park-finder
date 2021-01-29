@@ -10,13 +10,11 @@ async function parkResult() {
     let response = await axios.get(url)
 
     let parksArray = response.data.data
-    // console.log(parksArray)
 
     for (let i = 0; i < parksArray.length; i++) {
       let parkChosen = response.data.data[i].fullName.toLowerCase()
 
       if (parkChosen.includes(userSearch)) {
-        // console.log(`actual park:`, parkChosen)
 
         let eachPark = document.createElement('div')
         eachPark.classList.add('individual-parks')
@@ -43,7 +41,7 @@ async function parkResult() {
   }
 
 }
-// parkResult()
+
 
 // display the results
 
@@ -51,7 +49,6 @@ function renderWords(parkChosen, eachPark) {
   let wordsContainer = document.createElement('div')
   wordsContainer.classList.add('words')
 
-  // console.log(parkChosen)
   let displayWords = `
   <h2 class='park-name'>${parkChosen.fullName}</h2>
   <p class='park-descripton'>${parkChosen.description}</p>
@@ -65,8 +62,7 @@ function renderPhoto(parkChosen, eachPark) {
   let photoContainer = document.createElement('div')
   photoContainer.classList.add('photo')
 
-  console.log(parkChosen)
-  let randomNumber = Math.floor(Math.random() * 6)
+  let randomNumber = Math.floor(Math.random() * 4)
   let displayPhoto = `
   <img class='park-photo' src='${parkChosen.images[randomNumber].url}' alt='park photo'>
   `
