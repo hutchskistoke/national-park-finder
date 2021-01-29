@@ -10,14 +10,25 @@ input {
   font-family: 'Amatic SC', cursive;
   font-size: 1.5em;
   border-radius: 10%;
+  /* background-color: rgb(123, 154, 180); */
+}
+
+#search-field,
+#explore {
+  outline-color: rgb(123, 154, 180);;
+}
+
+::placeholder {
+  color: black;
 }
 
 input {
-  width: 140px;
+  width: 143px;
 }
 
 #explore {
   width: 90px;
+  background-color: white;
 }
 
 header {
@@ -64,7 +75,6 @@ a {
   flex-direction: column;
   font-family: 'Amatic SC', cursive;
   background: rgb(123, 154, 180);
-  /* border: 2px solid black; */
 }
 
 .search-bar {
@@ -73,6 +83,7 @@ a {
   align-items: flex-end;
   text-align: center;
   margin-top: 180px;
+
 }
 
 .results-container {
@@ -99,15 +110,16 @@ a {
   align-self: center;
   flex-direction: column wrap;
 }
+
+.park-photo {
+  border-radius: 15px;
+}
  
 
 /* media querry */
 
 
 @media screen and (max-width: 1000px) {
-  .container {
-    background-color: red;
-  }
   .individual-parks {
     flex-direction: column;
   }
@@ -120,7 +132,7 @@ a {
 
 @media screen and (max-width: 480px) {
   .container {
-    background-color: lightgreen;
+    background-color: rgb(112, 128, 144);
   }
   .words {
     flex-grow: 2;

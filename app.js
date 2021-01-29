@@ -4,7 +4,7 @@ let inputButton = document.querySelector('#search')
 // search function 
 async function parkResult() {
   let userSearch = userInput.value.toLowerCase()
-  const url = `https://developer.nps.gov/api/v1/parks?q=${userSearch}&api_key=fxheInC78kFAXET9y492TAWBb706vN5yWmjyIfTb`
+  const url = `https://cors-anywhere.herokuapp.com/https://developer.nps.gov/api/v1/parks?q=${userSearch}&api_key=fxheInC78kFAXET9y492TAWBb706vN5yWmjyIfTb`
   removeContent()
   try {
     let response = await axios.get(url)
