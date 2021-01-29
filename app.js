@@ -14,10 +14,9 @@ async function parkResult() {
 
     for (let i = 0; i < parksArray.length; i++) {
       let parkChosen = response.data.data[i].fullName.toLowerCase()
-      // let wantedResults = response.data.data[i]
+
       if (parkChosen.includes(userSearch)) {
-        console.log(`actual park:`, parkChosen)
-        // let wantedResults = response.data.data[i]
+        // console.log(`actual park:`, parkChosen)
 
         let eachPark = document.createElement('div')
         eachPark.classList.add('individual-parks')
@@ -30,12 +29,15 @@ async function parkResult() {
         renderPhoto(parksArray[i], eachPark)
 
       }
-      // else {
-      //   let errorMessage = `You must be lost...  Try your search again!`
-      //   let uhoh = document.querySelector('main')
-      //   uhoh.append(errorMessage)
-      // }
     }
+    let check = document.querySelector('main').hasChildNodes()
+    if (check !== true) {
+
+      let errorMessage = `<h2 class='uhoh'>You must be lost...  Try your search again!</h2>`
+      let uhoh = document.querySelector('main')
+      uhoh.insertAdjacentHTML('afterbegin', errorMessage)
+    }
+
   } catch (error) {
     console.log(error)
   }
@@ -72,6 +74,7 @@ function renderPhoto(parkChosen, eachPark) {
   eachPark.append(photoContainer)
 
 }
+
 
 let enter = document.querySelector('form')
 enter.addEventListener('submit', (e) => {

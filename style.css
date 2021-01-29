@@ -38,6 +38,11 @@ a {
   font-size: 2em;
 }
 
+.uhoh {
+  font-size: 3em;
+  text-align: center;
+}
+
 /* .park-name,
 .park-description,
 .park-photo {

@@ -184,13 +184,15 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+    let check = document.querySelector('main').hasChildNodes()
+    if (check !== true) {
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+      let errorMessage = `<h2 class='uhoh'>You must be lost...  Try your search again!</h2>`
+      let uhoh = document.querySelector('main')
+      uhoh.insertAdjacentHTML('afterbegin', errorMessage)
+    }
+
+    This is an error message that renders on the page if the user misspells a park name or looks for something not in this database. While it may be a simple few lines of code I had to find the right place for it which was challenging.
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.
+
