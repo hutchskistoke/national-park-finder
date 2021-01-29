@@ -25,15 +25,16 @@ async function parkResult() {
         let addPark = document.querySelector('main')
         addPark.append(eachPark)
 
-        renderPhoto(parksArray[i], eachPark)
-        renderWords(parksArray[i], eachPark)
 
-      } else {
-        // let error = document.querySelector('main')
-        let errorMessage = `<p>You must be lost... <br> Try your search again!</p>`
-        let error = document.querySelector('main')
-        error.insertAdjacentHTML('afterbegin', errorMessage)
+        renderWords(parksArray[i], eachPark)
+        renderPhoto(parksArray[i], eachPark)
+
       }
+      // else {
+      //   let errorMessage = `You must be lost...  Try your search again!`
+      //   let uhoh = document.querySelector('main')
+      //   uhoh.append(errorMessage)
+      // }
     }
   } catch (error) {
     console.log(error)
@@ -48,15 +49,14 @@ function renderWords(parkChosen, eachPark) {
   let wordsContainer = document.createElement('div')
   wordsContainer.classList.add('words')
 
-  console.log(parkChosen)
+  // console.log(parkChosen)
   let displayWords = `
   <h2 class='park-name'>${parkChosen.fullName}</h2>
   <p class='park-descripton'>${parkChosen.description}</p>
+  <a href='${parkChosen.url}' target='_blank'>Click here to learn more!</a>
   `
   wordsContainer.insertAdjacentHTML('afterbegin', displayWords)
   eachPark.append(wordsContainer)
-
-
 }
 
 function renderPhoto(parkChosen, eachPark) {
@@ -64,8 +64,9 @@ function renderPhoto(parkChosen, eachPark) {
   photoContainer.classList.add('photo')
 
   console.log(parkChosen)
+  let randomNumber = Math.floor(Math.random() * 6)
   let displayPhoto = `
-  <img class='park-photo' src='${parkChosen.images[0].url}' alt='park photo'>
+  <img class='park-photo' src='${parkChosen.images[randomNumber].url}' alt='park photo'>
   `
   photoContainer.insertAdjacentHTML('afterbegin', displayPhoto)
   eachPark.append(photoContainer)

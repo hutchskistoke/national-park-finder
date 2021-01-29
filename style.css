@@ -2,6 +2,7 @@
 h1 {
   font-family: 'Amatic SC', cursive;
   font-size: 2em;
+  color: white;
 }
 
 button, 
@@ -33,11 +34,15 @@ img {
   width: auto;
 }
 
-.park-name,
+a {
+  font-size: 2em;
+}
+
+/* .park-name,
 .park-description,
 .park-photo {
   border: 1px solid black;
-}
+} */
 
 .park-descripton {
   font-size: 2em;
@@ -54,7 +59,7 @@ img {
   flex-direction: column;
   font-family: 'Amatic SC', cursive;
   background: rgb(123, 154, 180);
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .search-bar {
@@ -67,21 +72,21 @@ img {
 
 .results-container {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   /* flex-wrap: wrap; */
-  /* justify-content: space-evenly; */
+  justify-content: space-around;
 }
 
 .individual-parks {
   display: flex;
-  flex-direction: column;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .words {
   display: flex;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .photo {
@@ -93,9 +98,27 @@ img {
 
 /* media querry */
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-color: red;
+  }
+  .individual-parks {
+    flex-direction: column;
+  }
+  header,
+  .words {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
   .container {
     background-color: lightgreen;
+  }
+  .words {
+    flex-grow: 2;
   }
 }
 
