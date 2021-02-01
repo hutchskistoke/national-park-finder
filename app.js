@@ -1,7 +1,17 @@
+
 let userInput = document.querySelector('#search-field')
 let inputButton = document.querySelector('#search')
 
-// search function 
+
+
+let message = `<h2>As the great John Muir once said:</h2> <h1>"The mountains are calling..."</h1> <h2>use the search bar to explore all of the places <em>you</em> must go!</h2>`
+let welcome = document.querySelector('main')
+welcome.classList.add('welcome')
+welcome.insertAdjacentHTML('afterbegin', message)
+
+
+
+// search function
 async function parkResult() {
   let userSearch = userInput.value.toLowerCase()
   const url = `https://cors-anywhere.herokuapp.com/https://developer.nps.gov/api/v1/parks?q=${userSearch}&api_key=fxheInC78kFAXET9y492TAWBb706vN5yWmjyIfTb`
@@ -11,6 +21,7 @@ async function parkResult() {
 
     let parksArray = response.data.data
 
+    // loop to find EXACT matches in fullName 
     for (let i = 0; i < parksArray.length; i++) {
       let parkChosen = response.data.data[i].fullName.toLowerCase()
 
@@ -28,6 +39,8 @@ async function parkResult() {
 
       }
     }
+
+    // error message when user search comes back empty 
     let check = document.querySelector('main').hasChildNodes()
     if (check !== true) {
 
@@ -62,6 +75,7 @@ function renderPhoto(parkChosen, eachPark) {
   let photoContainer = document.createElement('div')
   photoContainer.classList.add('photo')
 
+  // pick from the 5 photos provided at random
   let randomNumber = Math.floor(Math.random() * 4)
   let displayPhoto = `
   <img class='park-photo' src='${parkChosen.images[randomNumber].url}' alt='park photo'>

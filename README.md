@@ -196,3 +196,5 @@ https://developer.nps.gov/api/v1/parks?api_key=fxheInC78kFAXET9y492TAWBb706vN5yW
 
 ## Change Log
 
+My post MVPs changed as I started working with the data more.  I realized adding a park fee drop down menu would have been tough with the way the data was presented in this API.  Instead I focused on other things, like randomizing the photos that pop up when the user searches, an error message, and linking to each parks website. 
+
